@@ -1,5 +1,5 @@
 {% set name = "datamodeldict" %}
-{% set version = "0.9.6" %}
+{% set version = "0.9.7" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/D/DataModelDict/DataModelDict-{{ version }}.tar.gz
-  sha256: 857d4bf33f0b26ca718bd821fda7502dd6fb15aa09201b1fbdfaf4dfc85b8f6c
+  sha256: b1be7573cb4401aa250fd00f2e6392543f6f2498f8e02f6313595aa220e5c99e
 
 build:
   noarch: python
-  number: 1
-  script: "{{ PYTHON }} -m pip install . -vv"
+  number: 0
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
@@ -34,7 +34,7 @@ about:
   license: OTHER
   license_family: OTHER
   license_file: LICENSE.TXT
-  summary: 'Provides the Python DataModelDict class for creating, accessing and manipulating JSON/XML data structures.'
+  summary: Provides the Python DataModelDict class for creating, accessing and manipulating JSON/XML data structures.
 
   description: |
     The DataModelDict class is used for handling data models that have 

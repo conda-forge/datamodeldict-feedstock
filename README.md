@@ -5,7 +5,7 @@ Home: https://github.com/usnistgov/DataModelDict
 
 Package license: OTHER
 
-Feedstock license: BSD 3-Clause
+Feedstock license: BSD-3-Clause
 
 Summary: Provides the Python DataModelDict class for creating, accessing and manipulating JSON/XML data structures.
 
