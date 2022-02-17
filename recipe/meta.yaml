@@ -1,5 +1,5 @@
 {% set name = "datamodeldict" %}
-{% set version = "0.9.8" %}
+{% set version = "0.9.9" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/D/DataModelDict/DataModelDict-{{ version }}.tar.gz
-  sha256: 65c36954efa17449c69a4d8cb11c9273593ef01428cd77a609ee134eba771550
+  sha256: 0da74146c73ca84bbd3d680c3659464b611228bee48012c3860e320ebf3b5919
 
 build:
   noarch: python
