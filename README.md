@@ -5,7 +5,7 @@ Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/datamodeldict-f
 
 Home: https://github.com/usnistgov/DataModelDict
 
-Package license: OTHER
+Package license: NIST-Software
 
 Summary: Provides the Python DataModelDict class for creating, accessing and manipulating JSON/XML data structures.
 
@@ -17,7 +17,6 @@ The DataModelDict class is used for handling data models that have
 equivalent representations in XML, JSON, and Python. Constructing
 data models in this way is convenient as it supports compatibility
 across different software tools, such as different types of databases.
-
 
 Current build status
 ====================
@@ -50,31 +49,73 @@ conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `datamodeldict` can be installed with `conda`:
+How to use
+----------
+
+<details>
+<summary>With conda</summary>
 
 ```
 conda install datamodeldict
 ```
 
-or with `mamba`:
+</details>
+
+<details>
+<summary>With mamba</summary>
 
 ```
 mamba install datamodeldict
 ```
 
-It is possible to list all of the versions of `datamodeldict` available on your platform with `conda`:
+</details>
+
+<details>
+<summary>With pixi</summary>
+
+```
+# for adding to your local project
+pixi add datamodeldict
+# for installing globally
+pixi global install datamodeldict
+```
+
+</details>
+
+Search package versions
+-----------------------
+
+It is possible to list all of the versions of `datamodeldict` available on your platform:
+
+<details>
+<summary>With conda</summary>
 
 ```
 conda search datamodeldict --channel conda-forge
 ```
 
-or with `mamba`:
+</details>
+
+<details>
+<summary>With mamba</summary>
 
 ```
 mamba search datamodeldict --channel conda-forge
 ```
 
-Alternatively, `mamba repoquery` may provide more information:
+</details>
+
+<details>
+<summary>With pixi</summary>
+
+```
+pixi search datamodeldict --channel conda-forge
+```
+
+</details>
+
+<details>
+<summary>With mamba repoquery, which may provide more information</summary>
 
 ```
 # Search all versions available on your platform:
@@ -86,6 +127,8 @@ mamba repoquery whoneeds datamodeldict --channel conda-forge
 # List dependencies of `datamodeldict`:
 mamba repoquery depends datamodeldict --channel conda-forge
 ```
+
+</details>
 
 
 About conda-forge

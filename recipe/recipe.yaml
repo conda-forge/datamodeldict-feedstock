@@ -1,0 +1,55 @@
+schema_version: 1
+
+context:
+  name: datamodeldict
+  version: 0.9.10
+
+package:
+  name: ${{ name|lower }}
+  version: ${{ version }}
+
+source:
+  url: https://pypi.org/packages/source/D/DataModelDict/${{ name }}-${{ version }}.tar.gz
+  sha256: d6404f4682daba7a4fb07ab670a8ef277afd8fd4926345c91d5986719dbd04e7
+
+build:
+  number: 2
+  noarch: python
+  script: ${{ PYTHON }} -m pip install . -vv
+
+requirements:
+  host:
+    - python ${{ python_min }}.*
+    - pip
+    - uv-build
+  run:
+    - python >=${{ python_min }}
+    - pip
+    - xmltodict
+
+tests:
+  - python:
+      imports:
+        - DataModelDict
+      pip_check: true
+      python_version:
+        - ${{ python_min }}
+        - "*"
+
+about:
+  license: NIST-Software
+  license_file: LICENSE.TXT
+  summary: Provides the Python DataModelDict class for creating, accessing and manipulating JSON/XML data structures.
+  description: |
+    The DataModelDict class is used for handling data models that have
+    equivalent representations in XML, JSON, and Python. Constructing
+    data models in this way is convenient as it supports compatibility
+    across different software tools, such as different types of databases.
+  homepage: https://github.com/usnistgov/DataModelDict
+  repository: https://github.com/usnistgov/DataModelDict
+  documentation: https://github.com/usnistgov/DataModelDict
+
+extra:
+  recipe-maintainers:
+    - jan-janssen
+    - lmhale99
