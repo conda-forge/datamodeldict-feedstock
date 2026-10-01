@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: datamodeldict
-  version: 0.9.10
+  version: "0.9.11"
 
 package:
   name: ${{ name|lower }}
@@ -10,10 +10,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/D/DataModelDict/${{ name }}-${{ version }}.tar.gz
-  sha256: d6404f4682daba7a4fb07ab670a8ef277afd8fd4926345c91d5986719dbd04e7
+  sha256: ce22c4dbdedfc95270d858f3fc6ba29e74a0672ecbbb064ff4ddca3c05e2110c
 
 build:
-  number: 2
+  number: 0
   noarch: python
   script: ${{ PYTHON }} -m pip install . -vv
 
